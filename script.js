@@ -1,76 +1,31 @@
-// function checkDivisibleBy3(number){
-//     if(number % 3 == 0){
-//         console.log(number + "patik e 3-i")
-//     }
-//     else{
-//         console.log(number + "3-i patik che")
-//     }
+// let person = {
+//     name: "Levon",
+//     age: 16,
+//     city: "Yerevan"
 // }
-// checkDivisibleBy3(7)
+// person.isStudent = true;
+
+// delete person.city;
+
+// let hasAge = "age" in person;
+
+// console.log(person);
+// console.log("Has age", hasAge);
 
 
-// function maxOfTwo(a, b){
-//     if(a > b){
-//         return a;
-//     }
-//     else{
-//         return b;
-//     }
-// }
-// console.log(maxOfTwo(5, 4))
-
-
-// function getSum(number){
-//     let result = 0;
-//     for(let i=1; i<number; i++){
-//         result += i;
-//     }
-//     return result;
-// }
-// console.log(getSum(7))
-
-
-// function getTimes(number){
-//     let result = 1;
-//     for(let i=1; i<number; i++){
-//         if(i % 2 == 1){
-//             result *= i;
+// function removeUndefined(obj){
+//     for(let key in obj){
+//         if(obj[key] === undefined){
+//             delete obj[key];
 //         }
 //     }
-//     return result;
 // }
-// console.log(getTimes(10))
-
-
-// function getGrades(number){
-//     if(number == 10 || number == 9){
-//         return "gerazanc";
-//     }
-//     else if(number == 8 || number == 7){
-//         return "lav";
-//     }
-//     else if(number <= 6){
-//         return "bavarar";
-//     }
-//     }
-//     console.log(getGrades(5)) 
-
-
-// function minOfThree(a, b, c){
-//     if(a < b && a < c){
-//         return a;
-//     }
-//     else if(b < a && b < c){
-//         return b;
-//     }
-//     else if(c < a && c < b){
-//         return c;
-//     }
+// let obj = {
+//     key1: 'hello',
+//     key2: undefined,
+//     key3: 123,
+//     key4: undefined
 // }
-// console.log(minOfThree(9, 5, 6))
 
-
-// function raisedToThePower(a, b){
-//     return a**b;
-// }
-// console.log(raisedToThePower(3, 4))
+// removeUndefined(obj);
+// console.log(obj);
