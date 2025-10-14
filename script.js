@@ -1,60 +1,127 @@
-// let arr = [3,2,4,7,6]
-// arr.splice(2, 1)
-// console.log(arr)
-
-
-// let arr = [78, 29, 66, 40, 17, 1]
-// arr.splice(0, 3, 33, 99, 55)
-// console.log(arr)
-
-
-// function connectAndReverse(arr1, arr2){
-//     let a = arr1.concat(arr2)
-//     let b = a.reverse()
-//     return b;
+// 1.
+// function fetchUser(users, id) {
+//     let user = users.find(user => user.id === id)
+//     if(user){
+//         return Promise.resolve(user)
+//     } else return Promise.reject("not found")
 // }
-// let c = [9, 8, 7]
-// let d = [3, 2, 1]
-// let result = connectAndReverse(c, d)
-// console.log(result)
+// const users = [
+//     {id: 1, name: "Ann", role: "admin"},
+//     {id: 2, name: "John", role: "user"},
+// ]
+// fetchUser(users, 2)
+// .then((data) => {
+//     console.log(data)
+// })
+// .catch((err) => {
+//     console.log(err)
+// })
 
 
-// let string = "яблоко,банан,киви,груша"
-// let arr = string.split(`,`)
-// console.log(arr)
-
-
-// let arr = ["Я", "учу", "JS"]
-// let string = arr.join(` `)
-// console.log(string)
-
-
-// let arr = ["html", "css", "js"]
-// console.log(arr.includes("js"))
-
-
-// function twoString(arr, string){
-//     return arr.includes(string)
+// 2.
+// function fetchProduct(products, id){
+//     let product = products.find(product => product.id === id)
+//     if(product){
+//         return Promise.resolve(product)
+//     } else return Promise.reject("not found")
 // }
-// let names = ["Levon", "John", "Max", "Vicky"]
-// console.log(twoString(names, "Levon"))
+// const products = [
+//     {id: 10, name: "Laptop", price: 1000},
+//     {id: 11, name: "Phone", price: 600},
+// ]
+// fetchProduct(products, 11)
+// .then((data) => {
+//     console.log(data)
+// })
+// .catch((err) => {
+//     console.log(err)
+// })
 
 
-// let arr = [10, 20, 30, 40, 50]
-// arr.splice(0, 3)
-// console.log(arr)
+// 3.
+// function fetchBook(books, id){
+//     let book = books.find(book => book.id === id)
+//     if(book){
+//         return Promise.resolve(book)
+//     } else return Promise.reject("not found")
+// }
+// const books = [
+//     {id: 101, title: "Harry Potter", author: "Rowling"},
+//     {id: 102, title: "1984", author: "Orwell"},
+// ]
+// fetchBook(books, 102)
+// .then((data) => {
+//     console.log(data)
+// })
+// .catch((err) => {
+//     console.log(err)
+// })
 
 
-// let arr = ["red", "green", "blue", "yellow"]
-// arr.splice(2,1, "purple")
-// console.log(arr)
+// 4.
+// function createOrder(orders, userId, items){
+//     if(items.length !== 0){
+//         let order = {userId, items:[...items]}
+//         orders.push(order)
+//         return Promise.resolve(order)
+//     } else return Promise.reject("out of stock")
+// }
+// const ordersList = []
+// createOrder(ordersList, 2, [{name:"Laptop", price:1000}])
+// .then((data) => {
+//     console.log(data)
+// })
+// .catch((err) => {
+//     console.log(err)
+// })
 
 
-// let string = "Привет как дела"
-// let a = string.split(" ").reverse().join(" ")
-// console.log(a)
+// 5.
+// function updateUserRole(users, userId, role){
+//     const validRoles = ["user", "manager", "admin"]
+//     const user = users.find(user => user.id === userId)
+//     if(!user){
+//         return Promise.reject("not found")
+//     }
+//     if (!validRoles.includes(role)){
+//         return Promise.reject("not valid role")
+//     }
+//     user.role = role
+//     return Promise.resolve(user)
+// }
+// const usersList = [
+//     {id:1, name: "Anna", role: "admin"},
+//     {id: 2, name: "John", role: "user"},
+// ]
+// updateUserRole(usersList, 2, "admin")
+// .then((data) => {
+//     console.log("Updated", data)
+// })
+// .catch((err) => {
+//     console.log(err)
+// })
 
 
-// let arr = ["cat", "dog", "hamster", "parrot"]
-// let result = arr.filter(word => word.includes("r"))
-// console.log(result)
+// 6.
+// function blockUser(users, userId){
+//     let user = users.find(user => user.id === userId)
+//     if(!user){
+//         return Promise.reject("not found")
+//     }
+//     if(user.blocked === true){
+//         return Promise.reject("user's blocked")
+//     }
+//     user.blocked = true
+//     return Promise.resolve(user)
+// }
+// const usersList = [
+//     {id: 1, name: "Anna", role: "admin"},
+//     {id: 2, name: "Bob", role: "user"},
+// ]
+// blockUser(usersList, 2)
+// .then((data) => {
+//     console.log(data)
+// })
+// .catch((err) => {
+//     console.log(err)
+// })
